@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+/* Variables */
+
 :root {
     --primary-gray: #F7F7F7;
     --secondary-gray: #D7D7D7;
     --darker-gray: #B7B7B7;
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
     height: 7px;

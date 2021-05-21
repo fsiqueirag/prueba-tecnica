@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+/* Variables */
+
 :root {
     --primary-gray: #F7F7F7;
     --secondary-gray: #D7D7D7;
     --darker-gray: #B7B7B7;
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
     height: 7px;
@@ -27,7 +31,7 @@ html {
 }
 
 main {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 table {
@@ -47,7 +51,7 @@ table {
 span {
     color: var(--secondary-gray);
     cursor: pointer;
-    transition: 200ms ease color;
+    transition: color 200ms ease;
 }
 
 span:hover {
@@ -57,13 +61,13 @@ span:hover {
 td, th {
     border: 1px solid #F0F0F0;
     font-weight: 300;
-    padding: 5px;
+    padding: 7px;
 }
 
 th {
     font-weight: 400;
 }
   
-tr:nth-child(even) {
+tbody tr:nth-child(odd) {
     background-color: var(--primary-gray);
 }
