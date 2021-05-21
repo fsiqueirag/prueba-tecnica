@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --primary-gray: #F7F7F7;
+    --secondary-gray: #D7D7D7;
+    --darker-gray: #B7B7B7;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: var(--primary-gray);
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-gray);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--darker-gray);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    padding: 1rem;
+}
+
+main {
+    overflow-x:auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 1200px;
+    min-width: 768px;
+    width: 100%;
+}
+
+.th-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    color: var(--secondary-gray);
+    cursor: pointer;
+    transition: 200ms ease color;
+}
+
+span:hover {
+    color: var(--darker-gray);
+}
+  
+td, th {
+    border: 1px solid #F0F0F0;
+    font-weight: 300;
+    padding: 5px;
+}
+
+th {
+    font-weight: 400;
+}
+  
+tr:nth-child(even) {
+    background-color: var(--primary-gray);
+}

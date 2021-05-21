@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: grid;
+    height: 100vh;
+    position: relative;
+}
+
+main {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    filter: blur(0);
+    height: 100vh;
+    margin: auto;
+    transition: 1s filter ease;
+}
+
+.image-container {
+    align-items: center;
+    background-image: linear-gradient(rgba(219, 210, 210, 0),rgba(0, 0, 0, 0.623)) , url(https://images.unsplash.com/photo-1517299612364-6450641d7467?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    transition: opacity 200ms ease-in-out;
+    width: 100%;
+}
+
+.image-container:hover {
+    opacity: 0.9;
+}
+
+.image-container:hover .fa-play {
+    color: white;
+    background-color: rgba(236, 236, 236, 0.5);
+    transition: all 200ms ease-in-out;
+}
+
+.fa-play {
+    background-color: white;
+    border-radius: 100%;
+    font-size: 12px;
+    margin: auto;
+    padding: 18px;
+    text-align: center;
+}
+
+.text-container {
+    overflow: hidden;
+    padding: 5rem 4rem;
+}
+
+.text-container h1 {
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+/* Modal */
+
+.modal-container {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blur {
+    filter: blur(6px);
+}
+
+.shown {
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    opacity: 1;
+}
+
+.modal {
+    margin: auto;
+    max-width: 1000px;
+    width: 90%;
+    height: 70%;
+}
+
+.fa-times {
+    color: #444444;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.fa-times:hover {
+    color: #666666;
+}
+
+@media (max-width: 992px) {
+    main {
+        display: block;
+        max-width: 600px;
+        height: 100%;
+        padding: 2rem;
+    }
+
+    .image-container {
+        height: 250px;
+    }
+
+    .text-container {
+        padding: 2rem 0;
+    }
+
+    .modal {
+        height: 50%;
+        width: 90%;
+    }
+}
+
+/* Animaciones */
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+
+    100% { 
+        opacity: 1;
+    }
+}
