@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
+    box-sizing: border-box;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,16 +10,17 @@
 body {
     align-items: center;
     display: grid;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     position: relative;
 }
 
 main {
     align-items: center;
     display: grid;
-    grid-template-columns: 45% 55%;
     filter: blur(0);
-    height: 100vh;
+    grid-template-columns: 45% 55%;
+    height: 100%;
     margin: auto;
     transition: 1s filter ease;
 }
@@ -26,8 +28,8 @@ main {
 .image-container {
     align-items: center;
     background-image: linear-gradient(rgba(219, 210, 210, 0),rgba(0, 0, 0, 0.623)) , url(https://images.unsplash.com/photo-1517299612364-6450641d7467?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     cursor: pointer;
     display: flex;
     height: 100%;
@@ -55,7 +57,6 @@ main {
 }
 
 .text-container {
-    overflow: hidden;
     padding: 5rem 4rem;
 }
 
@@ -72,10 +73,11 @@ main {
 
 .modal-container {
     display: none;
-    position: absolute;
+    height: 100vh;
     opacity: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100vw;
 }
 
 .blur {
@@ -107,11 +109,13 @@ main {
     color: #666666;
 }
 
+/* Media queries */
+
 @media (max-width: 992px) {
     main {
         display: block;
-        max-width: 600px;
         height: 100%;
+        max-width: 600px;
         padding: 2rem;
     }
 
@@ -126,6 +130,24 @@ main {
     .modal {
         height: 50%;
         width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 150px;
+    }
+
+    .text-container {
+        padding: 1rem 0;
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-container p {
+        font-size: 0.8rem;
     }
 }
 
