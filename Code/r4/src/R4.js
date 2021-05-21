@@ -36,7 +36,7 @@ export const R4 = () => {
                 <ClipLoader css={spinnerStyle}/>
                 :
                 <main>
-                    <table>
+                    <table className="animate__animated animate__fadeIn">
                         <thead>
 
                             {/* Renderizar heads */}

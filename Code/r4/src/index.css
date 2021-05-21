@@ -39,7 +39,7 @@ body {
 }
 
 main {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 table {
@@ -69,13 +69,13 @@ span:hover {
 td, th {
     border: 1px solid #F0F0F0;
     font-weight: 300;
-    padding: 5px;
+    padding: 7px;
 }
 
 th {
     font-weight: 400;
 }
   
-tr:nth-child(even) {
+tbody tr:nth-child(odd) {
     background-color: var(--primary-gray);
 }
